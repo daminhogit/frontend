@@ -1,5 +1,23 @@
-@Library('roboshop') _
+pipeline {
+  agent any
 
-env.COMPONENT = "frontend"
-env.REPO_URL = "https://github.com/raghudevopsb69/frontend"
-nginx()
+  stages {
+
+    stage('Code Quality') {
+      steps {
+        echo 'Code Quality'
+      }
+    }
+    stage('Test Cases') {
+      steps {
+        echo 'Test Cases'
+      }
+    }
+
+    stage('Publish A Release') {
+      steps {
+        echo 'Publish A Release'
+      }
+    }
+  }
+}
